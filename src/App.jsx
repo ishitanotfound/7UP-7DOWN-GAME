@@ -1,6 +1,6 @@
-import MainGame from "./Components/MainGame";
+import MainGame from "./Components/MainGame/MainGame";
 import {Routes, Route, useNavigate } from "react-router";
-import Scores from "./Components/Scores";
+import Scores from "./Components/Scores/Scores";
 import Confetti from 'react-confetti'
 import { useWindowSize } from '@react-hook/window-size';
 import { useState } from "react"
@@ -29,7 +29,7 @@ export default function App() {
             <img src="menu_icon.png" className="h-[25px] lg:h-[30px]" alt="menu" />
           </button>
             {/* side drawer */}
-          <div className="offcanvas offcanvas-start" data-bs-scroll="true" tabIndex="-1" id="offcanvasWithBothOptions" aria-labelledby="offcanvasWithBothOptionsLabel">
+             <div className="offcanvas offcanvas-start" data-bs-scroll="false" data-bs-backdrop="true" tabIndex="-1" id="offcanvasWithBothOptions" aria-labelledby="offcanvasWithBothOptionsLabel">
             {/* instructions */}
             <div className="offcanvas-header bg-[#303030] text-white">
               <h5 className="offcanvas-title text-center font-light underline" id="offcanvasWithBothOptionsLabel"></h5> 
@@ -65,7 +65,7 @@ export default function App() {
           </div>
 
             {/* game title */}
-          <p className="text-white text-2xl lg:text-6xl font-semibold mt-2">
+          <p className=" title-text text-white text-4xl lg:text-6xl font-semibold mt-2">
             7UP-7DOWN 🎲
           </p>
 
