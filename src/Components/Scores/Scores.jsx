@@ -12,7 +12,9 @@ export default function Scores({track, setTrack, balance, setBalance}) {
       ">
         <li class="list-group-item font-semibold">🤑 Wins:  <span>{track.wins}</span></li>
         <li class="list-group-item font-semibold">😩 Loses: <span>{track.loses}</span></li>
-        <li class="list-group-item font-semibold">💰 Balance: ₹<span>{balance}</span></li>
+        <li class="list-group-item font-semibold">💰 Balance: {balance >= 0 
+          ? <>₹<span>{balance}</span></> 
+          : <>- ₹<span>{balance*(-1)}</span></>}</li>
       </ul>
       <div className="flex flex-col justify-center mt-3">
         <button className="button mt-6 px-6 py-3 bg-gradient-to-r from-rose-500 via-pink-500 to-fuchsia-600 text-white font-bold rounded-3xl shadow-lg hover:from-rose-600 hover:to-fuchsia-700 active:scale-95 transition duration-300" onClick={()=>{

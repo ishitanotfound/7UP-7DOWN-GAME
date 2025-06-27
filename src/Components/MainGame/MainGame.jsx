@@ -15,12 +15,12 @@ export default function MainGame({showConfetti, setShowConfetti, track, setTrack
   const [amt, setAmt] = useState(0)
   const navigate = useNavigate();
 
-  // useEffect(() => {
-  //   if (balance === 0) {
-  //     alert("You lost all your money! Redirecting to Scores 🥲");
-  //     navigate("/Scores");
-  //   }
-  // }, [balance, navigate]);
+  useEffect(() => {
+    if (balance < 0) {
+      alert("💸 Game Over! You lost all your money. RESTART to continue!");
+      navigate("/Scores");
+    }
+  }, [balance, navigate]);
 
   let rollDice = () => {
     if (!amt || isNaN(amt) || amt <= 0) {
@@ -94,6 +94,9 @@ export default function MainGame({showConfetti, setShowConfetti, track, setTrack
     } else {
       alert("Please choose an option before placing a bet!");
     }  
+    if (balance < 0) {
+      alert("Game Over!")
+    }
   }
   
   return (
