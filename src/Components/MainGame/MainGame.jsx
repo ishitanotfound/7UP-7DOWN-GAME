@@ -37,7 +37,7 @@ export default function MainGame({showConfetti, setShowConfetti, track, setTrack
     setDice1(diceEmojis[d1]);                           
     setDice2(diceEmojis[d2]); 
         
-    if (option === "7UP" || option === "7DOWN") {               
+    if (option === "7UP") {               
       
       if ((d1 + d2) > 7) {
         setMsg("🎉 You win 2x!");
@@ -63,6 +63,24 @@ export default function MainGame({showConfetti, setShowConfetti, track, setTrack
           return {...track, wins:track.wins+1};
         });
         setBalance(balance + (5 * amt));
+        setShowConfetti(true);
+        setTimeout(() => setShowConfetti(false), 4000);
+      } else {
+        setMsg(`😔 You lose!`);
+        setTrack((track) => {
+          return {...track, loses:track.loses+1};
+        });
+        setBalance(balance - amt);
+
+      }
+    } else if (option === "7DOWN") {               
+      
+      if ((d1 + d2) < 7) {
+        setMsg("🎉 You win 2x!");
+        setTrack((track) => {
+          return {...track, wins:track.wins+1};
+        });
+        setBalance(balance + (2 * amt));
         setShowConfetti(true);
         setTimeout(() => setShowConfetti(false), 4000);
       } else {
