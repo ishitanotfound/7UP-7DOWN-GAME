@@ -124,7 +124,7 @@ export default function MainGame({showConfetti, setShowConfetti, track, setTrack
       </div>
 
       {/* result box */}
-      <div className="result flex justify-center m-3 text-gray-300 pb-3">
+      <div className="result flex flex-col items-center justify-center m-3 text-gray-300 pb-3">
         <h3>{ msg }</h3>
         <p className="text-gray-200 text-center hover:cursor-default">Press the top right button to veiw Scores.</p>
       </div>  
