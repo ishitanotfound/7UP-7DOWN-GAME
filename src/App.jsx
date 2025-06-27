@@ -16,7 +16,7 @@ export default function App() {
 
   return (
     <div className="main-layout bg-[#242424] min-h-screen w-full fixed">
-      <div className="main-card bg-[#1a1a1a] h-[670.8px] w-[80%] lg:w-[50%] rounded-2xl mt-7 mx-auto">
+      <div className="main-card bg-[#1a1a1a] h-[670.8px] w-[90%] lg:w-[50%] rounded-2xl mt-7 mx-auto">
         
         {/* confetti */}
         {showConfetti && <Confetti width={width} height={height} />} 
