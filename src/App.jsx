@@ -37,19 +37,21 @@ export default function App() {
             </div>
 
             <div className="offcanvas-body bg-[#303030] text-white ">
-              <h3 className="text-center">About</h3>
+              <h3 className="text-center underline">About</h3>
               <p className="font-normal">7Up-7Down is a fun dice betting game where you predict if the total of two dice will be below 7, exactly 7, or above 7! You lose when your balance keeps falling below 0.</p>
 
-              <h3 className="text-center">Rules</h3>
+              <h3 className="text-center underline">Rules</h3>
               <ul className="font-normal list-disc pl-4">
                 <li>Two dice are rolled together.</li>
                 <li>You place a bet and choose:</li>
-                <li>🔹 7 Down (Total 2–6)</li>
-                <li>🔹 Lucky 7 (Total 7)</li>
-                <li>🔹 7 Up (Total 8–12)</li>
+                <ul className="pl-6 list-disc">
+                  <li>7 Down (Total 2–6)</li>
+                  <li>Lucky 7 (Total 7)</li>
+                  <li>7 Up (Total 8–12)</li>
+                 </ul>
               </ul>
 
-              <h3 className="text-center">Scoring & Balance System</h3>
+              <h3 className="text-center underline">Scoring & Balance System</h3>
               <ul className="font-normal list-disc pl-4">
                 <li>🪙 Starting Balance: You choose</li>
                 <li>💸 Correct Guess:
