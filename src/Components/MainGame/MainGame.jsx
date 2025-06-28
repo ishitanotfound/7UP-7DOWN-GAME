@@ -18,7 +18,7 @@ export default function MainGame({showConfetti, setShowConfetti, track, setTrack
   useEffect(() => {
     if (balance < 0) {
       alert("💸 Game Over! You lost all your money. RESTART to continue!");
-      navigate("/Scores",{replace:true});
+      navigate("/Scores");
     }
   }, [balance, navigate]);
 
