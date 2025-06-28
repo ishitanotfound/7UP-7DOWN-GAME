@@ -22,11 +22,11 @@ export default function Scores({track, setTrack, balance, setBalance}) {
           setTrack((track) => {
             return {...track, wins:0, loses:0};
           })
-          navigate('/');
+          navigate('/',{replace:true});
         }}>
           RESTART
         </button>
-        <button className="text-white mt-3 underline" onClick={()=>{navigate('/');}}>Back</button>
+        <button className="text-white mt-3 underline" onClick={()=>{navigate('/',{replace:true});}}>Back</button>
       </div>
     </div>
   )

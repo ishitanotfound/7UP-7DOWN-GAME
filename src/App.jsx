@@ -72,7 +72,7 @@ export default function App() {
           </p>
 
           {/* scores button */}
-          <button onClick={() => navigate("/Scores")} >📊 </button>
+          <button onClick={() => navigate("/Scores",{replace:true})} >📊 </button>
           
         </div>
         <Routes>
