@@ -34,7 +34,7 @@
 <img src="./public/desktop.png" alt="Desktop View" width="600"/>
 
 ### 📜 Drawer with Game Instructions  
-<img src="./public/about-drawer.png" alt="Instruction Drawer" width="500"/>
+<img src="public/about_drawer.png" alt="Instruction Drawer" width="500"/>
 
 ### 📊 Score Page  
 <img src="./public/scores.png" alt="Score Page" width="500"/>
